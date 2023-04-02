@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <style>
+        .input {
+            background-color: #383838;
+            border: 1ex solid none;
+            border-top-width: 1.7em;
+            margin: 0;
+            padding: 0;
+            color: #383838;
+            word-wrap: break-word;
+            outline: 7px solid #383838;
+            height: 30px;
+            font-size: 17px;
+            text-align: center;
+            transition: all 1s;
+            max-width: 190px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .input:hover {
+            border-top-width: 0.2em;
+            background-color: #f1e8e8;
+        }
+
+        .input:focus {
+            border-top-width: 0.2em;
+            background-color: #f1e8e8;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<header class="bg-dark" >
+<div class="utility-nav d-none d-md-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <p class="small"><i class="bx bx-envelope"></i> keja@gmail.com | <i class="bx bx-phone"></i> +254720119099</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-md navbar-light bg-transparent main-menu" style="box-shadow:none">
+    <div class="container">
+
+        <button type="button" id="sidebarCollapse" class="btn btn-link d-block d-md-none">
+            <i class="bx bx-menu icon-single"></i>
+        </button>
+
+        <a class="navbar-brand" href="index.html">
+            <img src="img/Anlogo.jpeg" alt="" style="display: flex; width: 100px; height: 100px;">
+        </a>
+
+        <ul class="navbar-nav ml-auto d-block d-md-none">
+            <li class="nav-item">
+                <a class="btn btn-link" href="#"><i class="bx bxs-cart icon-single"></i> <span class="badge badge-danger">3</span></a>
+            </li>
+        </ul>
+
+        <div class="collapse navbar-collapse">
+            <form class="form-inline my-2 my-lg-0 mx-auto">
+                <input type="text" name="text" class="input" placeholder="Search for houses">
+                <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="bx bx-search"></i></button>
+            </form>
+
+
+            <ul class="navbar-nav">
+                <li class="nav-item ml-md-3">
+                    <div class="w3-container">
+                        <button onclick="document.getElementById('id00').style.display='block'" class="btn btn-primary"><i class="bx bxs-user-circle mr-1"></i>Log In / Register</button>
+
+                        <div id="id00" class="w3-modal">
+                            <div class="w3-modal-content w3-card-4 w3-animate-top" style="max-width:600px; background-color: #171717;">
+
+                                <div class="w3-center"><br>
+                                    <span onclick="document.getElementById('id00').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+                                </div>
+
+                                <form class="form">
+                                    <p id="heading">Login</p>
+                                    <div class="field">
+                                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                            <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"></path>
+                                        </svg>
+                                        <input autocomplete="off" placeholder="Username" class="input-field" type="text">
+                                    </div>
+                                    <div class="field">
+                                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
+                                        </svg>
+                                        <input placeholder="Password" class="input-field" type="password">
+                                    </div>
+                                    <div class="btn">
+                                        <button class="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                        <a href="javascript:void(0)"><button class="button2">Sign Up</button></a>
+                                    </div>
+                                    <button class="button3">Forgot Password</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<nav class="navbar navbar-expand-md navbar-light bg-transparent sub-menu">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="contact.html">Get in touch</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="search-bar d-block d-md-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form class="form-inline mb-3 mx-auto">
+                    <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search">
+                    <button class="btn btn-success" type="submit"><i class="bx bx-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</header>
+
+    <section id="Intro" class="d-flex justify-content-center align-items-center" style="background-image: url(img/7a494eaa-f88a-4de0-8f1f-4539dc5166d4.webp)">
+        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+            <h3 id="mainhero" class="text-white bx-font-family align-items-center">Find the perfect place to stay at an amazing price all over Kenya. Belong anywhere with Keja.
+                <br><br>
+                Whether you're looking for a short-term rental or a long-term stay, Keja offers a wide variety of options to choose from, such as apartments, villas, cottages, guesthouses, and more.
+                <br><br>
+                With Keja, you can search for accommodations that fit your specific needs, such as location, price range, number of bedrooms, amenities, and more. The platform provides a user-friendly interface that makes it easy to browse through various listings, compare prices, and make reservations.
+                <br><br>
+                <button id="gettoknowus" class="btn">View the houses</button>
+            </h3>
+        </div>
+    </section><!-- End Hero -->
+
+
+
+<div class="products">
+
+    <div class="container" style="text-align: center; margin: 50px;">
+        <h2><strong>Discover your dream home</strong></h2>
+    </div>
+
+    <div class="container-fluid" style="background-color: #7f7fff">
+        <div class="row">
+            <!-- Button to open the modal -->
+            <div class="col" style="position: relative;">
+                <img onclick="document.getElementById('id01').style.display='block'" src="img/35722df3-12bc-4b15-a148-3697fd48b036.webp" alt="">
+
+                    <span>
+                        <input style="display: none;" type="checkbox" id="favorite" name="favorite-checkbox"  value="favorite-button">
+                            <label for="favorite" class="container bg-transparent" style="position: absolute; top: 10px; right: 10px; text-align: right;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                <div class="action">
+                                    <span class="option-1">Add to Favorites</span>
+                                    <span class="option-2">Added to Favorites</span>
+                                </div>
+                            </label>
+                    </span>
+
+                <span>Stunning cabin located Amboseli</span>
+                <br>
+                    <span>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                  </span>
+            </div>
+
+
+
+            <div id="id01" class="w3-modal">
+                <div class="w3-modal-content w3-card-2 w3-animate-opacity">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <div class="col-modal">
+                            <img  src="img/35722df3-12bc-4b15-a148-3697fd48b036.webp" alt="">
+                            <h2>Stunning cabin located in Amboseli</h2>
+                            <p>This cabin is the perfect retreat for nature lovers. Located in the heart of Amboseli National Park, you'll be surrounded by stunning wildlife and breathtaking views. Book your stay now!</p>
+                            <a href="index.html"><button>Book Now</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <img src="img/82cbc8f5-d926-4c2c-abaa-8eedc5f3504b.webp" onclick="document.getElementById('id02').style.display='block'" alt="" >
+
+                <span>
+                    <input style="display: none;" type="checkbox"  id="favorite2" name="favorite-checkbox" value="favorite-button">
+                        <label for="favorite" class="container bg-transparent" style="position: absolute; top: 10px; right: 10px; text-align: right;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <div class="action">
+                                <span class="option-1">Add to Favorites</span>
+                                <span class="option-2">Added to Favorites</span>
+                            </div>
+                        </label>
+                </span>
+
+                <span>
+                    Cottage in Kajiado
+                </span>
+                <br>
+                <span>
+                    <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                </span>
+            </div>
+
+            <!-- The Modal -->
+            <div id="id02" class="w3-modal">
+                <div class="w3-modal-content w3-card-2 w3-animate-opacity">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <div class="col-modal">
+                            <img src="img/82cbc8f5-d926-4c2c-abaa-8eedc5f3504b.webp" alt="">
+                            <h2>Cottage in Kajiado</h2>
+                            <p>The cave experience is one of the most exotic homes created for holiday lovers ,readers,friends and families who need a break from the norm. with the amazing views of the hills from the house ,will make you feel relaxed ,calmed and refreshed.</p>
+                            <button><a href="index.html">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Script to open and close the modal -->
+            <div class="col">
+                <img src="img/e0cfd323-ec7f-422a-8253-fba77cb53000.webp" alt="" onclick="document.getElementById('id03').style.display='block'">
+
+                <span>
+                    <input style="display: none;" type="checkbox" id="favorite3" name="favorite-checkbox"  value="favorite-button">
+                        <label for="favorite" class="container bg-transparent" style="position: absolute; top: 10px; right: 10px; text-align: right;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <div class="action">
+                                <span class="option-1">Add to Favorites</span>
+                                <span class="option-2">Added to Favorites</span>
+                            </div>
+                        </label>
+                </span>
+
+                <span>
+                    Treehouse Nr3 at NgongHouse on 4ha of nature.
+                </span>
+                <br>
+                <span>
+                    <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                </span>
+            </div>
+
+            <!-- The Modal -->
+            <div id="id03" class="w3-modal">
+                <div class="w3-modal-content w3-card-2 w3-animate-opacity">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <div class="col-modal">
+                            <img src="img/e0cfd323-ec7f-422a-8253-fba77cb53000.webp" alt="">
+                            <h2>Treehouse Nr3 at NgongHouse on 4ha of nature.</h2>
+                            <p>Treehouse Nr3 is a unique and charming accommodation option located in the NgongHouse property, surrounded by 4 hectares of beautiful nature. The treehouse is built on stilts and features a spacious bedroom with a comfortable king-sized bed, a sitting area, and a private bathroom with a shower.</p>
+                            <button><a href="index.html">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Script to open and close the modal -->
+
+            <div class="col">
+                <img src="img/e2690ab7-ad62-4c3d-a791-e8a216b4d33f.webp" onclick="document.getElementById('id04').style.display='block'" alt="">
+
+                <span>
+                    <input style="display: none;" type="checkbox"  id="favorite4" name="favorite-checkbox"  value="favorite-button">
+                        <label for="favorite" class="container bg-transparent" style="position: absolute; top: 10px; right: 10px; text-align: right;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <div class="action">
+                                <span class="option-1">Add to Favorites</span>
+                                <span class="option-2">Added to Favorites</span>
+                            </div>
+                        </label>
+                </span>
+
+                <span>
+                    Guesthouse in Naivasha
+                </span>
+                <br>
+                <span>
+                    <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                </span>
+            </div>
+
+            <!-- The Modal -->
+            <div id="id04" class="w3-modal">
+                <div class="w3-modal-content w3-card-2 w3-animate-opacity">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <div class="col-modal">
+                            <img src="img/e2690ab7-ad62-4c3d-a791-e8a216b4d33f.webp" alt="">
+                            <h2>Guesthouse in Naivasha</h2>
+                            <p>Francolin Cottage is one of the most attractive cottages located near Naivasha. This homely two story 3 and 1/2 bedroom lodge has spacious living areas, located on the award winning Great Rift Valley Golf Course. Combined with impressive views of the Aberdare Hills Francolin Cottage is your ideal retreat.</p>
+                            <button><a href="index.html">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Script to open and close the modal -->
+            <div class="col">
+                <span>
+
+                    <span>
+                    <input style="display: none;" type="checkbox"  id="favorite5" name="favorite-checkbox"  value="favorite-button">
+                        <label for="favorite" class="container bg-transparent" style="position: absolute; top: 10px; right: 10px; text-align: right;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <div class="action">
+                                <span class="option-1">Add to Favorites</span>
+                                <span class="option-2">Added to Favorites</span>
+                            </div>
+                        </label>
+                </span>
+
+                <img src="img/f05f3d15-9566-4baa-a263-42082e4a8aa7.webp" onclick="document.getElementById('id05').style.display='block'" alt="">
+                    Home in Nanyuki
+                </span>
+
+                <br>
+                <span>
+                    <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                </span>
+            </div>
+
+            <!-- The Modal -->
+            <div id="id05" class="w3-modal">
+                <div class="w3-modal-content w3-card-2 w3-animate-opacity">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id05').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <div class="col-modal">
+                            <img src="img/f05f3d15-9566-4baa-a263-42082e4a8aa7.webp" alt="">
+                            <h2>Home in Nanyuki</h2>
+                            <p>A very simple and basic burnt brick cottage off  NANYUKI_MERU HIGHWAY along MOUNT KENYA just 10 minutes drive out of town with a wooden floor,fireplace,instant hot shower, a kitchen with cutlery a stove.Has a big bed for two.
+
+                                The space
+                                Its very simple and basic.note:there's another house in the compound</p>
+                            <button><a href="index.html">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Script to open and close the modal -->
+            <div class="col">
+                <img src="img/69df720a-821f-4d49-913a-4e3ca417350b.webp" onclick="document.getElementById('id06').style.display='block'" alt="">
+
+                <span>
+                    <input style="display: none;" type="checkbox" id="favorite6" name="favorite-checkbox"  value="favorite-button">
+                        <label for="favorite" class="container bg-transparent" style="position: absolute; top: 10px; right: 10px; text-align: right;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <div class="action">
+                                <span class="option-1">Add to Favorites</span>
+                                <span class="option-2">Added to Favorites</span>
+                            </div>
+                        </label>
+                </span>
+
+                <span>
+                    Tiny home in Ngong
+                </span>
+
+                <br>
+                <span>
+                    <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                </span>
+            </div>
+
+            <!-- The Modal -->
+            <div id="id06" class="w3-modal">
+                <div class="w3-modal-content w3-card-2 w3-animate-opacity">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id06').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <div class="col-modal">
+                            <img src="img/69df720a-821f-4d49-913a-4e3ca417350b.webp" alt="">
+                            <h2>Tiny home in Ngong</h2>
+                            <p>Looking for a place to reset and relax,the red container is the place for you
+
+                                The red container is unique "off the grid" stay with modern decor. It is well insulated and create the perfect getaway with all the essentials you could need. The outdoor living space has ample room to roam, play, cook, and enjoy.</p>
+                            <button><a href="index.html">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Script to open and close the modal -->
+            <div class="col">
+                <img src="img/41324e12-a073-4c34-81d4-95faf9424b1f.webp" onclick="document.getElementById('id07').style.display='block'" alt="">
+
+                <span>
+                    <input style="display: none;" type="checkbox" id="favorite7" name="favorite-checkbox"  value="favorite-button">
+                        <label for="favorite" class="container bg-transparent" style="position: absolute; top: 10px; right: 10px; text-align: right;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <div class="action">
+                                <span class="option-1">Add to Favorites</span>
+                                <span class="option-2">Added to Favorites</span>
+                            </div>
+                        </label>
+                </span>
+
+                <span>
+                    Villa in Diani Beach
+                </span>
+                <br>
+                <span>
+                    <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                </span>
+            </div>
+
+            <!-- The Modal -->
+            <div id="id07" class="w3-modal">
+                <div class="w3-modal-content w3-card-2 w3-animate-opacity">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id07').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <div class="col-modal">
+                            <img src="img/41324e12-a073-4c34-81d4-95faf9424b1f.webp" alt="">
+                            <h2>Villa in Diani Beach</h2>
+                            <p>Saffron is ideal for couples, solo travelers and friends. We are an adults (16 +) only property focused on giving guests a tranquil stay to relax, rejuvenate and recharge.
+
+                                The villas are designed to embrace tropical contemporary living. The finishes, furniture and furnishings have a strong coastal flair ensuring that the vibe is completely laid back</p>
+                            <button><a href="index.html">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Script to open and close the modal -->
+            <div class="col">
+                <img src="img/73011244-4fd1-4bcf-88a7-a4b95a3c0d12.webp" onclick="document.getElementById('id08').style.display='block'" alt="">
+
+                <span>
+                    <input style="display: none;" type="checkbox" id="favorite8" name="favorite-checkbox"  value="favorite-button">
+                        <label for="favorite" class="container bg-transparent" style="position: absolute; top: 10px; right: 10px; text-align: right;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <div class="action">
+                                <span class="option-1">Add to Favorites</span>
+                                <span class="option-2">Added to Favorites</span>
+                            </div>
+                        </label>
+                </span>
+
+                <span>
+                    Cave in Kajiado
+                </span>
+                <br>
+                <span>
+                    <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                </span>
+            </div>
+
+            <!-- The Modal -->
+            <div id="id08" class="w3-modal">
+                <div class="w3-modal-content w3-card-2 w3-animate-opacity">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id08').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <div class="col-modal">
+                            <img src="img/73011244-4fd1-4bcf-88a7-a4b95a3c0d12.webp" alt="">
+                            <h2>Cave in Kajiado</h2>
+                            <p>One of the unique getaways you will ever get out of town .
+                            </p>
+                            <button><a href="index.html">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Script to open and close the modal -->
+            <div class="col">
+                <img src="img/c6bbe5de-8171-4231-9527-43c582215dad.webp" onclick="document.getElementById('id09').style.display='block'" alt="">
+
+                <span>
+                    <input style="display: none;" type="checkbox" id="favorite9" name="favorite-checkbox"  value="favorite-button">
+                        <label for="favorite" class="container bg-transparent" style="position: absolute; top: 10px; right: 10px; text-align: right;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <div class="action">
+                                <span class="option-1">Add to Favorites</span>
+                                <span class="option-2">Added to Favorites</span>
+                            </div>
+                        </label>
+                </span>
+
+                <span>
+                    Private room in Kilimani
+                </span>
+                <br>
+                <span>
+                    <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                </span>
+            </div>
+
+            <!-- The Modal -->
+            <div id="id09" class="w3-modal">
+                <div class="w3-modal-content w3-card-2 w3-animate-opacity">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id09').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <div class="col-modal">
+                            <img src="img/c6bbe5de-8171-4231-9527-43c582215dad.webp" alt="">
+                            <h2>Private room in Kilimani</h2>
+                            <p>Forget your worries in this spacious and serene space.
+                                THIS IS A SHARED APARTMENT!
+
+                                Forget your worries in this spacious and serene space.
+                                This high-end apartment, upscale apartment with a luxurious touch is a retreat in the Riverside drive. Get to catch the sunrise from the living room. </p>
+                            <button><a href="index.html">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Script to open and close the modal -->
+            <div class="col">
+                <img src="img/cb003631-b95d-406a-915d-2ef52481eca9.webp" onclick="document.getElementById('id10').style.display='block'" alt="">
+
+                <span>
+                    <input style="display: none;" type="checkbox" id="favorite10" name="favorite-checkbox"  value="favorite-button">
+                        <label for="favorite" class="container bg-transparent" style="position: absolute; top: 10px; right: 10px; text-align: right;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <div class="action">
+                                <span class="option-1">Add to Favorites</span>
+                                <span class="option-2">Added to Favorites</span>
+                            </div>
+                        </label>
+                </span>
+
+                <span>
+                    Villa in Malindi
+                </span>
+                <br>
+                <span>
+                    <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                </span>
+            </div>
+
+            <!-- The Modal -->
+            <div id="id10" class="w3-modal">
+                <div class="w3-modal-content w3-card-2 w3-animate-opacity">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id10').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <div class="col-modal">
+                            <img src="img/cb003631-b95d-406a-915d-2ef52481eca9.webp" alt="">
+                            <h2>Villa in Malindi</h2>
+                            <p>This villa is a perfect stay for family vacations
+
+                                The space
+                                Plenty of extra space for relaxing, dining and reading! Extra coaches for day relaxation</p>
+                            <button><a href="index.html">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Script to open and close the modal -->
+            <div class="col">
+                <img src="img/ceac93fc-5a9f-4aa3-b093-4f727fe85723.webp"  onclick="document.getElementById('id11').style.display='block'" alt="">
+
+                <span>
+                    <input style="display: none;" type="checkbox" id="favorite11" name="favorite-checkbox"  value="favorite-button">
+                        <label for="favorite" class="container bg-transparent" style="position: absolute; top: 10px; right: 10px; text-align: right;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <div class="action">
+                                <span class="option-1">Add to Favorites</span>
+                                <span class="option-2">Added to Favorites</span>
+                            </div>
+                        </label>
+                </span>
+
+                <span>
+                    Tent in Nairobi
+                </span>
+                <br>
+                <span>
+                    <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                </span>
+            </div>
+
+            <!-- The Modal -->
+            <div id="id11" class="w3-modal">
+                <div class="w3-modal-content w3-card-2 w3-animate-opacity">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id11').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <div class="col-modal">
+                            <img src="img/ceac93fc-5a9f-4aa3-b093-4f727fe85723.webp" alt="">
+                            <h2>Tent in Nairobi</h2>
+                            <p>Unique Floating Rooms on a Dam surrounded by Nature, Fresh Air, birds chirping in the trees, Fish beneath your feet.
+
+                                Relax and Unwind from the Hustle and Bustle of the City.
+
+                                Solar Powered w/ Outlets on Board</p>
+                            <button><a href="index.html">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Script to open and close the modal -->
+            <div class="col">
+                <img src="img/d5709021-7aa8-4f7c-bb1f-d0cb53badcc5.webp" onclick="document.getElementById('id12').style.display='block'" alt="">
+
+                <span>
+                    <input style="display: none;" type="checkbox" id="favorite12" name="favorite-checkbox"  value="favorite-button">
+                        <label for="favorite" class="container bg-transparent" style="position: absolute; top: 10px; right: 10px; text-align: right;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <div class="action">
+                                <span class="option-1">Add to Favorites</span>
+                                <span class="option-2">Added to Favorites</span>
+                            </div>
+                        </label>
+                </span>
+
+                <span>
+                    Olrok Farmhouse, 3BR Cabin in Nyandarua
+                </span>
+                <br>
+                <span>
+                    <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                </span>
+            </div>
+
+            <!-- The Modal -->
+            <div id="id12" class="w3-modal">
+                <div class="w3-modal-content w3-card-2 w3-animate-opacity">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id12').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <div class="col-modal">
+                            <img src="img/d5709021-7aa8-4f7c-bb1f-d0cb53badcc5.webp" alt="">
+                            <h2>Olrok Farmhouse, 3BR Cabin in Nyandarua</h2>
+                            <p>The farmhouse is a three Bedroom wooden cabin in Nyandarua County, Oljor orok Subcounty. It is within a strawberry farm with a well manicured lawn and a great view of the Aberdares. The farm is at the banks of Ewaso Nyiro river that flows to form Thompson's falls in Nyahururu town which is a 20 minutes drive from the house. Other activities include walking along the shores of lake Olbolosat, picnic at the same lake and a visit to the magical blue waters of Nyakanja.</p>
+                            <button><a href="index.html">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Script to open and close the modal -->
+        </div>
+    </div>
+</div>
+
+
+<div class="contactPage" style="background-color: #555555; height: 20vh;">
+    <div class="contactUs">
+        <div class="title">
+            <h2>Send us a message</h2>
+        </div>
+        <div class="box">
+            <div class="contact form">
+                <h3>Write your message</h3>
+                <form action="">
+                    <div class="formBox">
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>First Name</span>
+                                <input type="text" placeholder="John">
+                            </div>
+                            <div class="inputBox">
+                                <span>Last Name</span>
+                                <input type="text" placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="text" placeholder="johndoe@gmail.com">
+                            </div>
+                            <div class="inputBox">
+                                <span>Mobile number</span>
+                                <input type="text" placeholder="0720119099">
+                            </div>
+                        </div>
+
+                        <div class="row100">
+                            <div class="inputBox">
+                                <span>Message</span>
+                                <textarea placeholder="Write your message"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row100">
+                            <div class="inputBox">
+                                <input type="submit" value="Send">
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+            <!--            Info box-->
+            <div class="contact info">
+                <h3>Contact information</h3>
+                <div class="infoBox">
+                    <div>
+                        <span><ion-icon name="location"></ion-icon></span>
+                        <p>Afya Center, Naitobi <br>Kenya</p>
+                    </div>
+                    <div>
+                        <span><ion-icon name="mail"></ion-icon></span>
+                        <a href="mailto:keja@gmail.com">keja@gmail.com</a>
+                    </div>
+                    <div>
+                        <span><ion-icon name="call"></ion-icon></span>
+                        <a href="tel:+254720119099">+254720119099</a>
+                    </div>
+                    <!--                    Social Media links-->
+                    <ul class="sci">
+                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--            Map-->
+            <div class="contact map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8105058792353!2d36.825890950018845!3d-1.2878358359857325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11262da332f5%3A0xa7ea505f9c803a15!2sAfya%20Centre%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1680289563482!5m2!1sen!2ske" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Site footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h6>About Keja</h6>
+                <p class="text-justify">With Keja, you can search for accommodations that fit your specific needs, such as location, price range, number of bedrooms, amenities, and more. The platform provides a user-friendly interface that makes it easy to browse through various listings, compare prices, and make reservations.
+
+                    "Belong anywhere with Keja" suggests that Keja's accommodations are designed to make you feel at home, regardless of where you are in Kenya. The platform connects you with local hosts who can provide you with personalized recommendations and insider tips on what to see and do in the area. This way, you can immerse yourself in the local culture and experience the true essence of Kenya.</p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Categories</h6>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="javascript:void(0)">About Us</a></li>
+                    <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                    <li><a href="contact.html">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+                    <a href="#">Scanfcode</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
